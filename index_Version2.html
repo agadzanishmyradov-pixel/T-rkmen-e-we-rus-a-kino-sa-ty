@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CinemaHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-logo">C</span>
+          CinemaHub
+        </div>
+
+        <nav class="menu">
+          <a href="#">Baş sahypa</a>
+          <a href="#">Filmler</a>
+          <a href="#">Seriallar</a>
+          <a href="#">Täze</a>
+          <a href="#">Kinozallar</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="ghost-btn">Gir</button>
+          <button class="primary-btn">Abuna bol</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <span class="badge">Täze möwsüm</span>
+            <h1>Iň gowy filmleri bu ýerde gör</h1>
+            <p>
+              Iň halaýan dram, fantastika, söweş we sergüzeşt filmlerini
+              gör. Her gün täze maslahatlar.
+            </p>
+
+            <div class="hero-actions">
+              <button class="primary-btn">Indi gör</button>
+              <button class="secondary-btn">Has giňişle</button>
+            </div>
+
+            <div class="stats">
+              <div>
+                <strong>12K+</strong>
+                <span>Tomsa</span>
+              </div>
+              <div>
+                <strong>350+</strong>
+                <span>Film</span>
+              </div>
+              <div>
+                <strong>4.8/5</strong>
+                <span>Reýting</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-poster">
+            <img
+              src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=80"
+              alt="Movie poster"
+            />
+            <div class="poster-info">
+              <span>Täze</span>
+              <h3>Midnight Echo</h3>
+              <p>2025 • Fantastika • 8.7</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="mini-label">Katalog</span>
+              <h2>Meşhur filmler</h2>
+            </div>
+
+            <div class="controls">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Film gözle..."
+                aria-label="Film gözle"
+              />
+            </div>
+          </div>
+
+          <div id="genreFilters" class="genre-filters">
+            <button class="filter-btn active" data-genre="All">Hemmesi</button>
+            <button class="filter-btn" data-genre="Action">Action</button>
+            <button class="filter-btn" data-genre="Drama">Drama</button>
+            <button class="filter-btn" data-genre="Fantasy">Fantasy</button>
+            <button class="filter-btn" data-genre="Thriller">Thriller</button>
+            <button class="filter-btn" data-genre="Comedy">Comedy</button>
+            <button class="filter-btn" data-genre="Sci-Fi">Sci-Fi</button>
+          </div>
+
+          <div id="movieGrid" class="movie-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 CinemaHub. Ähli hukuklar goralanýar.</p>
+        <div class="footer-links">
+          <a href="#">Biz hakda</a>
+          <a href="#">Kömek</a>
+          <a href="#">Habarlaşmak</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="movieModal" class="modal hidden">
+      <div class="modal-backdrop"></div>
+      <div class="modal-card">
+        <button id="closeModal" class="close-btn">×</button>
+        <div class="modal-content" id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
